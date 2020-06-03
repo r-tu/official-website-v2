@@ -26,3 +26,7 @@ export default {
   color: #2c3e50;
 }
 </style>
+
+<style lang="scss">
+  @import './styles/global';
+</style>
