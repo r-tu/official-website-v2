@@ -10,7 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 Vue.mixin(mixin)
 Vue.config.productionTip = false
 
