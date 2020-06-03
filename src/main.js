@@ -1,12 +1,12 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import App from '@/App.vue'
+import router from '@/router'
+import store from '@/store'
 import VueI18n from 'vue-i18n'
-import i18n from './i18n'
-import globalMixin from './mixins/global'
+import i18n from '@/i18n'
+import mixin from '@/mixins/global'
 
-Vue.mixin(globalMixin)
+Vue.mixin(mixin)
 Vue.use(VueI18n)
 Vue.config.productionTip = false
 
