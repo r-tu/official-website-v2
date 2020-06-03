@@ -18,7 +18,7 @@ import tools from '@/scripts/global'
 export default {
   data() {
     return {
-      language: tools.langRegex.test(location.pathname) ? location.pathname.split('/')[1] : process.env.VUE_APP_I18N_LOCALE
+      language: tools.langRegex.test(location.pathname) ? tools.currentLang : process.env.VUE_APP_I18N_LOCALE
     }
   },
   watch: {
