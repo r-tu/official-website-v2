@@ -28,5 +28,5 @@ export default {
 </style>
 
 <style lang="scss">
-  @import './styles/global';
+  @import '@/scss/global';
 </style>
