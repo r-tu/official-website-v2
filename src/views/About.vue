@@ -13,12 +13,12 @@ export default {
     this.$api
       .getTestApi()
       .then((res) => {
-        console.log(res)
-        alert('test api success')
+        // console.log(res)
+        alert('test api success:' + res)
       })
       .catch((err) => {
-        console.log(err)
-        alert('test api error')
+        // console.log(err)
+        alert('test api error:' + err)
       })
   }
 }
