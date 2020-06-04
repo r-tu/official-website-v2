@@ -10,9 +10,7 @@ export default {
   name: "About",
   created() {
     //test axios
-    this.axios
-      .get("https://w5q6k.sse.codesandbox.io/api/v1/cumulative")
-      .then(res => {
+    this.$api.getTestApi().then(res => {
         console.log(res);
         alert('test api success')
       })
