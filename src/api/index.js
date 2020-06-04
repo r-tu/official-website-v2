@@ -6,7 +6,7 @@ Vue.use(VueAxios, axios)
 
 const api = ($axios) => ({
   getTestApi() {
-    return $axios.get("https://w5q6k.sse.codesandbox.io/api/v1/cumulative")
+    return $axios.get('https://w5q6k.sse.codesandbox.io/api/v1/cumulative')
   },
   ...booking($axios) // 拆分模組
 })

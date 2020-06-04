@@ -8,7 +8,3 @@ export default {
     Vue.$tools = Vue.prototype.$tools = tools // 提供靜態方法及原型方法都可操作
   }
 }
-
-
-
-

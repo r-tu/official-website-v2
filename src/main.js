@@ -5,7 +5,7 @@ import store from '@/store'
 import i18n from '@/i18n'
 import mixin from '@/mixins/global'
 import ElementUI from 'element-ui'
-import api from '@/api'  // 裡面包含axios載入
+import api from '@/api' // 裡面包含axios載入
 import 'element-ui/lib/theme-chalk/index.css'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -19,5 +19,5 @@ new Vue({
   router,
   store,
   i18n,
-  render: h => h(App)
+  render: (h) => h(App)
 }).$mount('#app')

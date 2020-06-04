@@ -1,0 +1,16 @@
+{
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
+  "printWidth": 110,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "semi": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "requirePragma": false,
+  "insertPragma": false,
+  "vueIndentScriptAndStyle" : false,
+  "endOfLine": "auto"
+}

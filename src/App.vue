@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import commonHeader from "@/components/common/header.vue";
-import commonFooter from "@/components/common/footer.vue";
+import commonHeader from '@/components/common/header.vue'
+import commonFooter from '@/components/common/footer.vue'
 export default {
   components: {
     commonHeader,
     commonFooter
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -28,5 +28,5 @@ export default {
 </style>
 
 <style lang="scss">
-  @import '@/scss/global';
+@import '@/scss/global';
 </style>

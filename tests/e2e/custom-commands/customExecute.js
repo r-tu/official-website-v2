@@ -12,7 +12,7 @@
  *
  * @param {*} data
  */
-exports.command = function command (data) {
+exports.command = function command(data) {
   // Other Nightwatch commands are available via "this"
 
   // .execute() inject a snippet of JavaScript into the page for execution.
@@ -22,7 +22,9 @@ exports.command = function command (data) {
   //
   this.execute(
     // The function argument is converted to a string and sent to the browser
-    function (argData) { return argData },
+    function (argData) {
+      return argData
+    },
 
     // The arguments for the function to be sent to the browser are specified in this array
     [data],

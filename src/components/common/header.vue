@@ -17,12 +17,14 @@
 export default {
   data() {
     return {
-      language: this.$tools.langRegex.test(location.pathname) ? this.$tools.currentLang : process.env.VUE_APP_I18N_LOCALE
+      language: this.$tools.langRegex.test(location.pathname)
+        ? this.$tools.currentLang
+        : process.env.VUE_APP_I18N_LOCALE
     }
   },
   watch: {
     language(value) {
-      this.changeLang(value);
+      this.changeLang(value)
     }
   }
 }
