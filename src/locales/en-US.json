@@ -3,6 +3,10 @@
   "aboutpage": "This is an about page",
   "link_home": "Home",
   "link_about": "About",
+  "link_member": "Member",  
   "language_chinese": "中文",
-  "language_english": "English"
+  "language_english": "English",
+  "login_account": "Account",
+  "login_password": "Password",
+  "button_login": "Login"
 }

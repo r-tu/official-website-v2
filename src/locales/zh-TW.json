@@ -3,6 +3,10 @@
     "aboutpage": "這是關於頁面",
     "link_home": "首頁",
     "link_about": "關於",
+    "link_member": "會員",
     "language_chinese": "中文",
-    "language_english": "English"
+    "language_english": "English",
+    "login_account": "帳號",
+    "login_password": "密碼",
+    "button_login": "登入"
   }

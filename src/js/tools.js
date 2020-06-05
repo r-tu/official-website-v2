@@ -1,6 +1,9 @@
 const tools = {
   langRegex: /^\/[a-z]{2}-[A-Z]{2}/,
-  currentLang: location.pathname.split('/')[1]
+  currentLang: () => location.pathname.split('/')[1],
+  redirectLang(path) {
+    return '/' + this.currentLang() + path
+  }
 }
 
 export default {

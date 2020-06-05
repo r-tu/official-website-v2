@@ -2,7 +2,8 @@
   <div>
     <div class="nav">
       <router-link to="/">{{ $t('link_home') }}</router-link> |
-      <router-link to="/about">{{ $t('link_about') }}</router-link>
+      <router-link to="/about">{{ $t('link_about') }}</router-link> |
+      <router-link to="/member">{{ $t('link_member') }}</router-link>
     </div>
     <div class="language">
       <select v-model="language">
@@ -18,7 +19,7 @@ export default {
   data() {
     return {
       language: this.$tools.langRegex.test(location.pathname)
-        ? this.$tools.currentLang
+        ? this.$tools.currentLang()
         : process.env.VUE_APP_I18N_LOCALE
     }
   },

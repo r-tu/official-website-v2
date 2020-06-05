@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>{{ $t('aboutpage') }}</h1>
-    <el-button type="primary">測試Eelement-ui</el-button>
+    <el-button type="primary">Eelement-ui</el-button>
   </div>
 </template>
 
@@ -10,16 +10,16 @@ export default {
   name: 'About',
   created() {
     //test axios
-    this.$api
-      .getTestApi()
-      .then((res) => {
-        // console.log(res)
-        alert('test api success:' + res)
-      })
-      .catch((err) => {
-        // console.log(err)
-        alert('test api error:' + err)
-      })
+    // this.$api
+    //   .getTestApi()
+    //   .then((res) => {
+    //     console.log(res)
+    //     alert('test api success:' + res)
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //     alert('test api error:' + err)
+    //   })
   }
 }
 </script>
