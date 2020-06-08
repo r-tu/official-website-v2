@@ -1,5 +1,5 @@
 module.exports = {
-  lintOnSave: true /* process.env.NODE_ENV !== 'production' */,
+  lintOnSave: process.env.NODE_ENV !== 'production',
   devServer: {
     overlay: {
       warnings: true,

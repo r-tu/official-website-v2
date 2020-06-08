@@ -10,11 +10,7 @@
         <input type="password" v-model="password" />
       </div>
       <div>
-        <input
-          type="submit"
-          :value="$t('button_login')"
-          @click.prevent="send"
-        />
+        <input type="submit" :value="$t('button_login')" @click.prevent="send" />
       </div>
     </form>
   </div>

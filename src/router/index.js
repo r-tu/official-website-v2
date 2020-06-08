@@ -6,6 +6,12 @@ Vue.use(tools)
 Vue.use(VueRouter)
 const routes = [
   {
+    path: '/',
+    redirect: () => {
+      return '/' + (Vue.$tools.currentLang() || process.env.VUE_APP_I18N_LOCALE)
+    }
+  },
+  {
     path: '/:lang',
     name: 'Home',
     component: () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue')
@@ -18,29 +24,21 @@ const routes = [
   {
     path: '/:lang/member/login',
     name: 'login',
-    component: () =>
-      import(/* webpackChunkName: "Login" */ '@/views/MemberCenter/Login.vue')
+    component: () => import(/* webpackChunkName: "Login" */ '@/views/MemberCenter/Login.vue')
   },
   {
     path: '/:lang/member',
     name: 'member',
-    component: () =>
-      import(/* webpackChunkName: "Member" */ '@/views/MemberCenter/Member.vue')
+    component: () => import(/* webpackChunkName: "Member" */ '@/views/MemberCenter/Member.vue')
   }
 ]
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
   routes
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.path === '/') {
-    // 當網址從 http://localhost:8080/ 直接進入時
-    next({
-      path: '/' + (Vue.$tools.currentLang() || process.env.VUE_APP_I18N_LOCALE)
-    }) // 套上語系路徑 http://localhost:8080/zh-TW/
-  } else if (!Vue.$tools.langRegex.test(to.fullPath)) {
+  if (!Vue.$tools.langRegex.test(to.fullPath)) {
     // 沒有語系路徑開頭
     next({
       path:
