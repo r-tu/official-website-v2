@@ -15,10 +15,11 @@ Vue.use(ElementUI)
 Vue.use(api)
 Vue.mixin(mixin)
 Vue.config.productionTip = false
-
-new Vue({
-  router,
-  store,
-  i18n,
-  render: (h) => h(App)
-}).$mount('#app')
+;(async () => {
+  new Vue({
+    router,
+    store,
+    i18n: await i18n,
+    render: (h) => h(App)
+  }).$mount('#app')
+})()

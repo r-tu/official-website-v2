@@ -9,17 +9,17 @@
 export default {
   name: 'About',
   created() {
-    //test axios
-    // this.$api
-    //   .getTestApi()
-    //   .then((res) => {
-    //     console.log(res)
-    //     alert('test api success:' + res)
-    //   })
-    //   .catch((err) => {
-    //     console.log(err)
-    //     alert('test api error:' + err)
-    //   })
+    // ==== test axios ====
+    this.$api.booking
+      .getBooking()
+      .then((res) => {
+        console.log(res)
+        alert('test api success:' + res)
+      })
+      .catch((err) => {
+        console.log(err)
+        alert('test api error:' + err)
+      })
   }
 }
 </script>
