@@ -6,11 +6,23 @@ import airport from '@/api/booking/airport'
 Vue.use(VueAxios, axios)
 
 const api = ($axios) => ({
-  getTestApi() {
-    return $axios.get('https://w5q6k.sse.codesandbox.io/api/v1/cumulative')
-  },
   booking: {
-    ...airport($axios), // 拆分模組
+    ...airport(
+      (($axios) => {
+        const instance = $axios.create({
+          baseURL: process.env.VUE_APP_BASE_API_URL,
+          timeout: 3000,
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        instance.interceptors.request.use((config) => {
+          // config.headers.common['jx-lang'] = Vue.$tools.currentLang()
+          return config
+        })
+        return instance
+      })($axios)
+    ), // 拆分模組
     ...booking($axios) // 拆分模組
   }
 })

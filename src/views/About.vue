@@ -11,7 +11,7 @@ export default {
   created() {
     // ==== test axios ====
     this.$api.booking
-      .getBooking()
+      .getAirport()
       .then((res) => {
         console.log(res)
         alert('test api success:' + res)
